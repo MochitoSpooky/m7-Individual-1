@@ -3,16 +3,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Remember App</title>
+    <title>My Reminder App</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="container">
-        {% block content %}
-        <h1>Bienvenido a My Remember App</h1>
-        <a href="{% url 'login' %}" class="btn">Iniciar sesión</a>
-        <img src="{% static 'img/base.jpg' %}" alt="Imagen">
-        {% endblock %}
+        <div class="content">
+            {% block content %}
+            <h1>Bienvenido a My Reminder App</h1>
+            <img src="{% static 'img/nota.jpg' %}" alt="Logo">
+            <br>
+            <a href="{% url 'login' %}" class="btn">Iniciar sesión</a>
+            {% endblock %}
+        </div>
     </div>
 </body>
 </html>
