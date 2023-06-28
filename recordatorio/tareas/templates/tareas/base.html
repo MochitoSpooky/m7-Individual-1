@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Remember App</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        <h1>Bienvenido a My Remember App</h1>
+        <a href="{% url 'login' %}" class="btn">Iniciar sesión</a>
+        <img src="{% static 'img/base.jpg' %}" alt="Imagen">
+        {% endblock %}
+    </div>
+</body>
+</html>
